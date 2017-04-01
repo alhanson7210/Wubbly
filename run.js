@@ -50,11 +50,10 @@ app.get('/getData', jsonParser, function(req,res){
 
 
 
-
-
-var port = 8000
+//"test:server": "cross-env NODE_ENV=test PORT=8080 MONGO_URL=mongodb://localhost:27017/Hanson --compilers js:babel-core/register --recursive server/tests/**/*.spec.js"
+var port = process.env.PORT || 8080;
+//var port = 8000
 var server = app.listen(port, function(){
 
   console.log("listening on port " + port)
-}
-)
+});
