@@ -1,0 +1,24 @@
+{
+  "name": "Wubbly",
+  "version": "1.0.0",
+  "description": "Take notes with Wubbly",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node run.js"
+  },
+  "author": "Alex Hanson",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25",
+    "ratchet": "^0.3.1",
+    "ratchet-npm": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UxDeveloperxU/wubblyProject.git"
+  }
+}

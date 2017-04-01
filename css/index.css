@@ -1,0 +1,38 @@
+h3{
+	text-align: center;
+}
+.img-container{
+	display: inline-block;
+	width: 100px;
+	height:100px;
+	position:relative;
+	bottom:auto;
+	top:auto;
+}
+
+.img-container img{
+	height:50px;
+	width:50px;
+}
+
+.description{
+margin-top: 0;
+display:inline-block;
+max-width: 50%;
+}
+
+.note{
+	height:100px;
+	border-top: solid thin black;
+	border-bottom: solid thin black;
+	margin-bottom: 5px;
+	width:100%;
+}
+.description h4{
+	display: inline-block;
+	margin-bottom: 0;
+	
+}
+.description p{
+	display: inline-block;
+}
