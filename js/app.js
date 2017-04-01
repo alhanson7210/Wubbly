@@ -53,6 +53,24 @@ $stateProvider
     }
   })
 
+  .state("homeBar", {
+      url:"/titleBar",
+      views: {
+        'main':{
+          templateUrl: 'Templates/titleBar.html',
+          resolve:{
+            noteService: function($http){
+
+            }
+
+          },
+          controller: function($scope,$http,noteService){
+
+          }
+        }
+      }
+    })
+
 
 
 

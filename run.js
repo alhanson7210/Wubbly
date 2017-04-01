@@ -48,9 +48,9 @@ app.get('/getData', jsonParser, function(req,res){
     })
 })
 
-var port = "https://pumpkin-cobbler-81747.herokuapp.com/";
-//var port = 5000;
-//app.set('port', (process.env.PORT || port));
+//var port = "https://pumpkin-cobbler-81747.herokuapp.com/";
+var port = 5000;
+app.set('port', (process.env.PORT || port));
 //"test:server": "cross-env NODE_ENV=test PORT=8080 MONGO_URL=mongodb://localhost:27017/Hanson --compilers js:babel-core/register --recursive server/tests/**/*.spec.js"
 //var port = process.env.PORT || 8080;
 //var port = 8000
