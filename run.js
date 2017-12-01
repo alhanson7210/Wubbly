@@ -20,12 +20,36 @@ MongoClient.connect(url, function(err, db){
     console.log("Connection Error")
     process.exit(1);
   }else{
-    collection = db.collection('myCollection');
+    collection = db.collection('WubblyStorage');
     console.log("Connection to mongo successful")
   }
 });
+//servers this project or (__dirname) as static files
+app.use(express.static(__dirname))
 
+app.post('/newWubby', jsonParser,function(req, res){
+    var data = req.body;
 
+    collection.insert(data, function(err,doc){
+        if(err){
+            res.sendJson({success:false,message:"Error saving data"});
+        }else{
+            res.sendStatus(200);
+        }
+    })
+
+    app.get('/getWubbys',jsonParser,function(req,res){
+        collection.find().toArray(function(err,docs){
+            if(err){
+                res.sendJson({success:true,message:"Error retreiving data"});
+            }else{
+                res.json(docs);
+            }
+        })
+    })
+
+})
+/*
 app.post('/addNote', jsonParser, function(req,res){
     var data = req.body;
 
@@ -37,7 +61,7 @@ app.post('/addNote', jsonParser, function(req,res){
       }
     })
 })
-
+s
 app.get('/getData', jsonParser, function(req,res){
     collection.find().toArray(function(err,docs){
       if(err){
@@ -46,7 +70,7 @@ app.get('/getData', jsonParser, function(req,res){
         res.json(docs);
       }
     })
-})
+})*/
 
 //var port = "https://pumpkin-cobbler-81747.herokuapp.com/";
 var port = 5000;

@@ -31,8 +31,115 @@ max-width: 50%;
 .description h4{
 	display: inline-block;
 	margin-bottom: 0;
-	
+
 }
 .description p{
 	display: inline-block;
 }
+/*top and bottom navbar and content-view(main) css*/
+body {
+margin-left:auto;
+margin-right:auto;
+background-color:#c2d6d6;
+}
+#bot {
+	bottom:0;
+    top:92%;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #2952a3;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.min {
+  padding: 16px;
+  margin-top: 25px;
+  height: 1500px; /* Used in this example to enable scrolling */
+}
+.navbar > .menuTabWubbly{
+	font-size:32px;
+}
+/*top and bottom navbar css*/
+
+/*side navBar css*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #006699;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    margin-top:54px;
+    z-index:0;
+}
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 2px;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 60px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+/*side navBar css*/
+
+/*welcome card css*/
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 60%;
+    border-radius: 5px;
+    margin-top:4em;
+    margin-left:auto;
+    margin-right:auto;
+}
+.container {
+    padding: 2px 16px;
+    background-color:white;
+}
+/*welcome card css*/
+
+/*wubBtn css*/
+.wubBtnContainer{
+	border-radius: 50%;
+    width:60px;
+    height:60px;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top:200px;
+    z-index:1;
+}
+.wubBtnContainer > img{
+	width:100%;
+    height:100%;
+
+}
+/*wubBtn css*/

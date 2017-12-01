@@ -16,9 +16,57 @@
 </head>
 
 <body>
+	<div id="mySidenav" class="sidenav">
+	  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	  <a ui-sref="welcome">Home</a>
+	  <a ui-sref="wubStore">Wubs</a>
+	</div>
+	<!--side navBar-->
 
-<a ui-sref="home"></a>
-<div ui-view="main"></div>
+	<!--top nav bar-->
+	<div class="navbar">
+	  <!--burger menu icon-->
+	  <a>
+	  	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
+	  </a>
+	  <!--burger menu icon-->
+
+	  <!--menu tabs-->
+	  <a href="#news"></a>
+	  <a href="#contact"></a>
+	  <a href="#news"></a>
+	  <a href="#news"></a>
+	  <a href="#news"></a>
+	  <a href="#news"></a>
+	  <a href="#news"></a>
+	  <a href="#about" class="menuTabWubbly">Wubbly</a>
+	  <!--menu tabs-->
+	</div>
+	<!--top nav bar-->
+
+
+
+
+
+
+
+
+	<!--main-->
+	<div ui-view="home">
+
+	</div>
+	<!--main-->
+
+
+
+
+
+
+
+
+	<!--bottom nav bar-->
+	<div id="bot" class="navbar"></div>
+<!--w3schools angularjs reference https://www.w3schools.com/angular/angular_ref_directives.asp -->
 <!--note button-->
 <!-- <input type="button" id="noteButton" value="form" onclick="createForm"
 
@@ -90,6 +138,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
 <script src="./js/app.js"></script>
+<script src="./js/index.js"></script>
 
 </body>
 </html>

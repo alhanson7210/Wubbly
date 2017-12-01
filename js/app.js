@@ -2,84 +2,54 @@ var app = angular.module('wubbly', ["ui.router"]);
 
 app.config(function($stateProvider, $urlRouterProvider){
 
-$urlRouterProvider.otherwise('/home')
+$urlRouterProvider.otherwise('/welcome')
 
 $stateProvider
 
-  .state("home", {
-    url:"/home",
-    views: {
-      'main':{
-        templateUrl: 'Templates/title.html',
-        resolve:{
-          noteService: function($http){
-            console.log("this runs on start");
-            console.log($http.get('/getData'))
-            return $http.get('/getData');
-          }
+//state name is welcome
+.state("welcome",{
+  //url in browser is welcome
+  url:'/welcome',
+  views:{
+    //in the div ui-view 'home', welcome's code will be injected
+    'home':{
+      templateUrl:'Templates/welcome.html',
+      resolve:{
 
-        },
-        controller: function($scope,$http,noteService){
-            $scope.notes = noteService.data;
-            $scope.newNote = {};
-
-
-            $scope.saveNote = function(){
-              $http.post('/addNote',$scope.newNote);
-              console.log($scope.newNote);
-              $scope.notes.push($scope.newNote);
-              $scope.newNote = {};
-            }
-        }
       }
+
     }
-  })
 
-.state("example", {
-    url:"/example",
-    views: {
-      'main':{
-        templateUrl: 'Templates/title1.html',
-        resolve:{
-          noteService: function($http){
-
-          }
-
-        },
-        controller: function($scope,$http,noteService){
-
-        }
-      }
-    }
-  })
-
-  .state("homeBar", {
-      url:"/titleBar",
-      views: {
-        'main':{
-          templateUrl: 'Templates/titleBar.html',
-          resolve:{
-            noteService: function($http){
-
-            }
-
-          },
-          controller: function($scope,$http,noteService){
-
-          }
-        }
-      }
-    })
-
-
-
-
-
-})//close the config property
-
-/*$('#noteButton').click("createForm"){
-  function createForm(){
-    $form = ("<form id=""></form>");
-    $form.append(<)
   }
-}*/
+
+})
+//wubs in sidebar that stores wubbys'
+.state('wubStore',{
+  url:'/wubStore',
+  views:{
+    //in the div ui-view 'appContent', the app's content will be injected
+    'home':{
+      templateUrl:'Templates/wubStore.html',
+      resolve:{
+
+      }
+    }
+  }
+})
+//this state is where the 4 binded wubbys' will be created
+.state('wubbies',{
+  //url in browser for wubbyCreator
+  url:'/wubbies',
+  views:{
+    'home':{
+      templateUrl:'Templates/wubbies.html',
+      resolve:{
+
+      }
+    }
+  }
+})
+
+
+
+});//close the config property
